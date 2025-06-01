@@ -81,7 +81,6 @@ class _MainPageState extends State<MainPage> {
           _controlBT(),
           _infoDevice(),
           Expanded(child: _listDevices()),
-          _inputSerial(),
           _buttons(),
         ],
       ),
@@ -160,22 +159,6 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
         );
-  }
-
-  Widget _inputSerial() {
-    return ListTile(
-      trailing: TextButton(
-        child: const Text('reiniciar'),
-        onPressed: () => setState(() => times = 0),
-      ),
-      title: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16.0),
-        child: Text(
-          "Pulsador presionado (x$times)",
-          style: const TextStyle(fontSize: 18.0),
-        ),
-      ),
-    );
   }
 
   Widget _buttons() {
